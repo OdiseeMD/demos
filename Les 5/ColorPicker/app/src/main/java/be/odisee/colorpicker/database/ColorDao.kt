@@ -12,6 +12,9 @@ interface ColorDao {
     @Query("SELECT * FROM colors")
     fun getAllLiveData(): LiveData<Array<Color>>
 
+    @Query("SELECT * FROM colors WHERE id = :id")
+    fun getColor(id: Long): LiveData<Color>
+
     @Insert
     suspend fun insert(color: Color)
 

@@ -7,14 +7,83 @@
         android:layout_height="match_parent"
         tools:context=".ColorInputFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
-            android:id="@+id/numberOfitems"
-            android:layout_width="match_parent"
+            android:id="@+id/red_textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello_blank_fragment"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            android:text="@string/red"
+            app:layout_constraintBottom_toBottomOf="@id/red_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/red_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/red_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/name_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/green_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/green"
+
+            app:layout_constraintBottom_toBottomOf="@id/green_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/green_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/green_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/name_textView"
+            app:layout_constraintTop_toBottomOf="@id/red_slider" />
+
+        <TextView
+            android:id="@+id/blue_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/blue"
+
+            app:layout_constraintBottom_toBottomOf="@id/blue_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/blue_slider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/blue_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/name_textView"
+            app:layout_constraintTop_toBottomOf="@id/green_slider" />
+
+        <EditText
+            android:id="@+id/name_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/name_textView"
+            app:layout_constraintTop_toBottomOf="@id/blue_slider" />
+
+        <TextView
+            android:id="@+id/name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/name"
+            app:layout_constraintBaseline_toBaselineOf="@id/name_editText"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/add_button"
@@ -23,7 +92,15 @@
             android:text="Add"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/numberOfitems" />
+            app:layout_constraintTop_toBottomOf="@id/name_editText" />
+
+        <View
+            android:id="@+id/color_preview"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="16dp"
+            android:elevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/add_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
