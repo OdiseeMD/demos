@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ScoreCounter</string>
+    <string name="score">%d punten</string>
+</resources>

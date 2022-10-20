@@ -30,7 +30,7 @@ class InputFragment : Fragment() {
             false
         )
 
-        binding.calculateButton.setOnClickListener {
+        lifecycle.binding.calculateButton.setOnClickListener {
             val weightText = binding.weightEditText.text.toString()
             val lengthText = binding.lengthEditText.text.toString()
             val weight = weightText.toFloatOrNull()
@@ -48,4 +48,5 @@ class InputFragment : Fragment() {
 
         return binding.root
     }
+
 }
